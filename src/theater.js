@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Stage from './stage.js';
 import nsa from './nsajs/index.js';
+import GoogleURL from 'google-url'
 
 var styles = {
 	wrapper: {
@@ -135,7 +136,8 @@ var styles = {
 				backgroundImage: 'url(./img/spinner.gif)',
 				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'contain',
-				backgroundPosition: 'center center'
+				backgroundPosition: 'center center',
+				color: '#FFF'
 			}
 		}
 	},
@@ -150,37 +152,70 @@ var styles = {
 	}
 };
 
-var QPUrl = (props) => {
-	var content = (
-		<div style={styles.qp.url.spinner}></div>
-	);
-	if (props.peerId) {
-		content = (
-			<div style={styles.qp.url.wrapper}>
-				<span style={styles.qp.url.protocol}>http://</span>santa.ppts.co/{props.peerId}
-			</div>
-		);
-	}
-	return content;
-};
+const googleUrl = new GoogleURL({ key: GOOGLE_APIKEY })
+const kurtURL = __PROD__ ? 'https://kurt.puppets.life/' : KURT_URL
 
-var Theater = React.createClass({
-	componentDidMount() {
-		nsa.start().then((id) => {
-			this.setState({
-				peerId: id
-			});
-		});
-	},
-	getInitialState() {
-		return {
-			peerId: null
-		};
-	},
-	//
+class QPUrl extends Component {
+	constructor(props) {
+		super(props)
+		this.state = { shortURL: null, connected: false }
+		nsa.on('connect', () => this.setState({ connected: true }))
+	}
+
+	componentWillReceiveProps(props) {
+		const { signal } = props
+		if (signal) {
+			console.log(kurtURL)
+			googleUrl.shorten(`${kurtURL}?signal=${btoa(JSON.stringify(signal))}`, (err, res) => {
+				if (err) {
+					console.log('Error: ', err)
+				}
+				this.setState({ shortURL: res })
+			})	
+		}
+	}
+
 	render() {
-		return (
-			<div style={styles.wrapper}>
+		if (this.state.connected) {
+			return <div>Connected!</div>
+		}
+
+		if (!this.props.signal || !this.state.shortURL) {
+			return <div style={styles.qp.url.spinner}>·</div>
+		}
+
+		return <div style={styles.qp.url.wrapper}>
+			<span style={styles.qp.url.protocol}>{this.state.shortURL}</span>
+			<div>
+				Enter ID: <input type="text" onChange={e => this.setState({ id: e.currentTarget.value })} />
+				<input
+					type="button"
+					value="Go"
+					onClick={() => {
+						console.log(this.state.id)
+						googleUrl.expand(`https://goo.gl/${this.state.id}`, (err, longUrl) => {
+							console.log(longUrl)
+							const data = JSON.parse(atob(longUrl.split('?signal=')[1]))
+							nsa.connect(data)
+						})
+					}} />
+			</div>
+		</div>
+	}
+}
+
+class Theater extends Component {
+	constructor(props) {
+		super(props)
+		this.state = { signal: null }
+	}
+
+	componentDidMount() {
+		nsa.start().then(signal => this.setState({ signal }))
+	}
+
+	render() {
+		return <div style={styles.wrapper}>
 				<div style={styles.canvas.realCanvas}>
 					<Stage />
 				</div>
@@ -208,13 +243,12 @@ var Theater = React.createClass({
 							<div style={styles.qp.features.title}>Android</div>
 							<div style={styles.qp.features.text}>Open up in<br />Chrome App!</div>
 						</div>
-						<QPUrl peerId={this.state.peerId} />
+						<QPUrl signal={this.state.signal} />
 					</div>
 				</div>
 				<div style={styles.ghost}></div>
 			</div>
-		);
 	}
-});
+}
 
 export default Theater;

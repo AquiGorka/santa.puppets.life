@@ -42,7 +42,10 @@ var resize = function() {
 var Stage = React.createClass({
 	componentDidMount() {
 		// nsa
-		nsa.on('data', (data) => remoteDeviceData.orientation = data.orientation );
+		nsa.on('data', data => {
+			const { orientation } = JSON.parse(data)
+			remoteDeviceData.orientation = orientation
+		})
 
 		// stage
 		utils.render({
