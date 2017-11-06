@@ -19,5 +19,3 @@ npm run watch
 npm run build
 ```
 
-### Notes
-This uses PeerJS for WebRTC, to establish the connections a signaling servers is needed. If you want to use this with their public signaling server get your API key and set it up in `config.js`
