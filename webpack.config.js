@@ -3,9 +3,10 @@ var webpack = require('webpack');
 
 // definePlugin takes raw strings and inserts them, so you can put strings of JS if you want.
 var definePlugin = new webpack.DefinePlugin({
-  __DEV_iOS__: JSON.stringify(JSON.parse(process.env.BUILD_DEV_IOS || 'true')),
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true')),
-  __PROD__: JSON.stringify(JSON.parse(process.env.BUILD_PROD || 'false'))
+  __PROD__: JSON.stringify(JSON.parse(process.env.BUILD_PROD || 'false')),
+	GOOGLE_APIKEY: JSON.stringify(process.env.GOOGLE_APIKEY),
+	KURT_URL: JSON.stringify(process.env.KURT_URL)
 });
 
 module.exports = {
@@ -21,7 +22,13 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /.js$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets:['react', 'es2015'] } }
+      { test: /.js$/, loader: 'babel-loader', exclude: /node_modules/, query: { presets:['react', 'es2015'] } },
+			{ test: /\.json$/, loader: 'json-loader' }
     ]
-  }
+  },
+	node: {
+		fs: 'empty',
+		net: "empty",
+    tls: "empty"
+	}
 };
