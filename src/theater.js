@@ -165,7 +165,7 @@ class QPUrl extends Component {
 	componentWillReceiveProps(props) {
 		const { signal } = props
 		if (signal) {
-			console.log(kurtURL)
+			console.log('kurt url: ', kurtURL)
 			googleUrl.shorten(`${kurtURL}?signal=${btoa(JSON.stringify(signal))}`, (err, res) => {
 				if (err) {
 					console.log('Error: ', err)
@@ -192,9 +192,8 @@ class QPUrl extends Component {
 					type="button"
 					value="Go"
 					onClick={() => {
-						console.log(this.state.id)
 						googleUrl.expand(`https://goo.gl/${this.state.id}`, (err, longUrl) => {
-							console.log(longUrl)
+							//console.log(longUrl)
 							const data = JSON.parse(atob(longUrl.split('?signal=')[1]))
 							nsa.connect(data)
 						})
