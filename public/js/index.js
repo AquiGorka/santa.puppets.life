@@ -19915,17 +19915,32 @@
 			cursor: 'pointer'
 		},
 		github: {
-			fontSize: 22,
-			borderRadius: 30,
-			background: '#FFF',
-			width: 30,
-			height: 30,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			cursor: 'pointer',
-			color: '#24292E',
-			border: '2px solid #24292E'
+			icon: {
+				fontSize: 22,
+				border: '2px solid #CCC',
+				borderRadius: 30,
+				background: '#FFF',
+				color: '#CCC',
+				width: 30,
+				height: 30,
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				cursor: 'pointer'
+			},
+			hover: {
+				fontSize: 22,
+				borderRadius: 30,
+				background: '#FFF',
+				width: 30,
+				height: 30,
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				cursor: 'pointer',
+				color: '#24292E',
+				border: '2px solid #24292E'
+			}
 		},
 		facebook: {
 			fontSize: 16,
@@ -20062,7 +20077,7 @@
 							{ style: styles.link, href: 'https://github.com/AquiGorka/puppets', target: '_blank', title: 'Puppets @ Github' },
 							_react2.default.createElement(
 								_hover2.default,
-								{ style: styles.icon, hover: styles.github },
+								{ style: styles.github.icon, hover: styles.github.hover },
 								_react2.default.createElement('i', { className: 'fa fa-github' })
 							)
 						),

@@ -32,17 +32,32 @@ const styles = {
 		cursor: 'pointer'
 	},
 	github: {
-		fontSize: 22,
-		borderRadius: 30,
-		background: '#FFF',
-		width: 30,
-		height: 30,
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		cursor: 'pointer',
-		color: '#24292E',
-		border: '2px solid #24292E'
+		icon: {
+			fontSize: 22,
+			border: '2px solid #CCC',
+			borderRadius: 30,
+			background: '#FFF',
+			color: '#CCC',
+			width: 30,
+			height: 30,
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			cursor: 'pointer'
+		},
+		hover: {
+			fontSize: 22,
+			borderRadius: 30,
+			background: '#FFF',
+			width: 30,
+			height: 30,
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			cursor: 'pointer',
+			color: '#24292E',
+			border: '2px solid #24292E'
+		}
 	},
 	facebook: {
 		fontSize: 16,
@@ -147,7 +162,7 @@ class Header extends Component {
 						</Hover>
 					</a>
 					<a style={styles.link} href="https://github.com/AquiGorka/puppets" target="_blank" title="Puppets @ Github">
-						<Hover style={styles.icon} hover={styles.github}>
+						<Hover style={styles.github.icon} hover={styles.github.hover}>
 							<i className="fa fa-github"></i>
 						</Hover>
 					</a>
