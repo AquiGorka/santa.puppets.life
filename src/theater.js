@@ -42,7 +42,7 @@ var styles = {
 			background: '#FFF',
 			maxWidth: 450,
 			flexGrow: 1,
-			backgroundImage: 'url(img/android-smartphone-clipart.jpg)',
+			backgroundImage: 'url(img/smartphone-clipart.jpg)',
 			backgroundRepeat: 'no-repeat',
 			backgroundSize: 'containt',
 			backgroundPosition: 'center center',
@@ -225,7 +225,6 @@ class Theater extends Component {
 							<div>Quick Play</div>
 							<div style={styles.qp.separator}></div>
 						</div>
-						
 						<div style={styles.qp.features.wrapper1}>
 							<div style={styles.qp.features.title}>Pure & Simple</div>
 							<div style={styles.qp.features.text}>Everyone can come<br />in and play!</div>
@@ -239,8 +238,8 @@ class Theater extends Component {
 							<div style={styles.qp.features.text}>Visit URL<br />in your phone!</div>
 						</div>
 						<div style={styles.qp.features.wrapper4}>
-							<div style={styles.qp.features.title}>Android</div>
-							<div style={styles.qp.features.text}>Open up in<br />Chrome App!</div>
+							<div style={styles.qp.features.title}>Browser</div>
+							<div style={styles.qp.features.text}>Open up in any<br />browser App!</div>
 						</div>
 						<QPUrl signal={this.state.signal} />
 					</div>
