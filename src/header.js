@@ -1,7 +1,7 @@
-import React from 'react';
-import Hover from './hover.js';
+import React, { Component } from 'react'
+import Hover from './hover.js'
 
-var styles = {
+const styles = {
 	wrapper: {
 		fontFamily: 'Love Ya Like A Sister',
 		padding: '20px 10px 10px 20px',
@@ -86,19 +86,31 @@ var styles = {
 	link: {
 		textDecoration: 'none',
 		marginRight: 10
-	}
-};
-
-var Header = React.createClass({
-	onClickContact(e) {
-		e.preventDefault();
-		this.props.onShowContact();
 	},
-	//
+	by: {
+		span: {
+			color: '#CCC',
+			fontSize: 20,
+			marginLeft: 15
+		},
+		link: {
+			color: '#CCC',
+			textDecoration: 'none'
+		}
+	}
+}
+
+class Header extends Component {
+	
+	onClickContact(e) {
+		e.preventDefault()
+		this.props.onShowContact()
+	}
+	
 	render() {
 		return (
 			<div style={styles.wrapper}>
-				<div>Puppets.life</div>
+				<div>Puppets.life<span style={styles.by.span}>by <a style={styles.by.link} href="https://www.AquiGorka.net" target="_blank">AquiGorka.net</a></span></div>
 				<div style={styles.social}>
 					<a style={styles.link} href="http://igg.me/at/puppets-life" target="_blank" title="Puppets @ IndieGoGo">
 						<Hover style={styles.icon} hover={styles.indiegogo}>
@@ -122,8 +134,8 @@ var Header = React.createClass({
 					</a>
 				</div>
 			</div>
-		);
+		)
 	}
-});
+}
 
-export default Header;
+export default Header
