@@ -31,6 +31,19 @@ const styles = {
 		justifyContent: 'center',
 		cursor: 'pointer'
 	},
+	github: {
+		fontSize: 22,
+		borderRadius: 30,
+		background: '#FFF',
+		width: 30,
+		height: 30,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		cursor: 'pointer',
+		color: '#24292E',
+		border: '2px solid #24292E'
+	},
 	facebook: {
 		fontSize: 16,
 		borderRadius: 30,
@@ -94,8 +107,17 @@ const styles = {
 			marginLeft: 15
 		},
 		link: {
-			color: '#CCC',
-			textDecoration: 'none'
+			link: {
+				color: '#CCC',
+				textDecoration: 'none'
+			},
+			normal: {
+				display: 'inline-block',
+			},
+			hover: {
+				display: 'inline-block',
+				textDecoration: 'underline'
+			}
 		}
 	}
 }
@@ -110,11 +132,23 @@ class Header extends Component {
 	render() {
 		return (
 			<div style={styles.wrapper}>
-				<div>Puppets.life<span style={styles.by.span}>by <a style={styles.by.link} href="https://www.AquiGorka.net" target="_blank">AquiGorka.net</a></span></div>
+				<div>
+					Puppets.life
+					<span style={styles.by.span}>
+						by <Hover style={styles.by.link.normal} hover={styles.by.link.hover}>
+							<a style={styles.by.link.link} href="https://www.AquiGorka.net" target="_blank">AquiGorka.net</a>
+						</Hover>
+					</span>
+				</div>
 				<div style={styles.social}>
 					<a style={styles.link} href="http://igg.me/at/puppets-life" target="_blank" title="Puppets @ IndieGoGo">
 						<Hover style={styles.icon} hover={styles.indiegogo}>
 							<i className="fa fa-thumbs-up"></i>
+						</Hover>
+					</a>
+					<a style={styles.link} href="https://github.com/AquiGorka/puppets" target="_blank" title="Puppets @ Github">
+						<Hover style={styles.icon} hover={styles.github}>
+							<i className="fa fa-github"></i>
 						</Hover>
 					</a>
 					<a style={styles.link} href="https://www.facebook.com/puppets.life/" target="_blank" title="Puppets @ Facebook">
