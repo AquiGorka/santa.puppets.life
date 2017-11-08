@@ -20175,7 +20175,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20205,365 +20205,377 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var styles = {
-		wrapper: {
-			minHeight: 500,
-			display: 'flex',
-			flexGrow: 1,
-			position: 'relative',
-			borderBottom: '1px solid #FFF'
-		},
-		canvas: {
-			wrapper: {
-				width: '60%',
-				borderBottomRightRadius: 5,
-				display: 'flex',
-				borderBottom: '1px solid #FFF'
-			},
-			realCanvas: {
-				position: 'absolute',
-				top: 0,
-				bottom: 0,
-				right: '25%',
-				left: 0,
-				display: 'flex',
-				zIndex: 2
-			}
-		},
-		qp: {
-			wrapper: {
-				borderLeft: '1px solid #EEE',
-				flexGrow: 1,
-				width: '40%',
-				display: 'flex',
-				background: '#FFF',
-				marginBottom: 50
-			},
-			inner: {
-				margin: '15px auto',
-				background: '#FFF',
-				maxWidth: 450,
-				flexGrow: 1,
-				backgroundImage: 'url(img/smartphone-clipart.jpg)',
-				backgroundRepeat: 'no-repeat',
-				backgroundSize: 'containt',
-				backgroundPosition: 'center center',
-				textAlign: 'center',
-				display: 'flex',
-				flexWrap: 'wrap'
-			},
-			title: {
-				width: '100%',
-				textAlign: 'left',
-				padding: '10px 0 15px 10px',
-				fontSize: 20,
-				fontFamily: 'Montserrat'
-			},
-			separator: {
-				borderBottom: '3px solid #00AEFF',
-				width: 105,
-				height: 1,
-				position: 'relative',
-				top: 5,
-				zIndex: 1
-			},
-			features: {
-				wrapper1: {
-					boxSizing: 'border-box',
-					width: '50%',
-					height: 80,
-					display: 'flex',
-					alignContent: 'center',
-					flexWrap: 'wrap',
-					textAlign: 'right',
-					paddingRight: 60
-				},
-				wrapper2: {
-					boxSizing: 'border-box',
-					width: '50%',
-					height: 80,
-					display: 'flex',
-					alignContent: 'center',
-					flexWrap: 'wrap',
-					textAlign: 'left',
-					paddingLeft: 60
-				},
-				wrapper3: {
-					boxSizing: 'border-box',
-					width: '50%',
-					height: 100,
-					display: 'flex',
-					alignContent: 'center',
-					flexWrap: 'wrap',
-					textAlign: 'right',
-					paddingRight: 60
-				},
-				wrapper4: {
-					boxSizing: 'border-box',
-					width: '50%',
-					height: 100,
-					display: 'flex',
-					alignContent: 'center',
-					flexWrap: 'wrap',
-					textAlign: 'left',
-					paddingLeft: 60
-				},
-				title: {
-					fontSize: 14,
-					textTransform: 'uppercase',
-					width: '100%'
-				},
-				text: {
-					marginTop: 3,
-					color: '#777',
-					fontSize: 13,
-					width: '100%'
-				}
-			},
-			url: {
-				wrapper: {
-					flexGrow: 1,
-					color: '#333',
-					fontSize: 30,
-					fontFamily: 'Montserrat'
-				},
-				protocol: {
-					fontSize: 24,
-					color: '#CCC',
-					marginRight: 2,
-					fontStyle: 'normal'
-				},
-				spinner: {
-					flexGrow: 1,
-					backgroundImage: 'url(./img/spinner.gif)',
-					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'contain',
-					backgroundPosition: 'center center',
-					color: '#FFF'
-				}
-			}
-		},
-		ghost: {
-			position: 'absolute',
-			zIndex: 1,
-			bottom: 0,
-			right: 0,
-			height: 50,
-			width: '40%',
-			background: '#FFF'
-		}
+	  wrapper: {
+	    minHeight: 500,
+	    display: 'flex',
+	    flexGrow: 1,
+	    position: 'relative',
+	    borderBottom: '1px solid #FFF'
+	  },
+	  canvas: {
+	    wrapper: {
+	      width: '60%',
+	      borderBottomRightRadius: 5,
+	      display: 'flex',
+	      borderBottom: '1px solid #FFF'
+	    },
+	    realCanvas: {
+	      position: 'absolute',
+	      top: 0,
+	      bottom: 0,
+	      right: '25%',
+	      left: 0,
+	      display: 'flex',
+	      zIndex: 2
+	    }
+	  },
+	  qp: {
+	    wrapper: {
+	      borderLeft: '1px solid #EEE',
+	      flexGrow: 1,
+	      width: '40%',
+	      display: 'flex',
+	      background: '#FFF',
+	      marginBottom: 50
+	    },
+	    inner: {
+	      margin: '15px auto',
+	      background: '#FFF',
+	      maxWidth: 450,
+	      flexGrow: 1,
+	      backgroundImage: 'url(img/smartphone-clipart.jpg)',
+	      backgroundRepeat: 'no-repeat',
+	      backgroundSize: 'containt',
+	      backgroundPosition: 'center center',
+	      textAlign: 'center',
+	      display: 'flex',
+	      flexWrap: 'wrap'
+	    },
+	    title: {
+	      width: '100%',
+	      textAlign: 'left',
+	      padding: '10px 0 15px 10px',
+	      fontSize: 20,
+	      fontFamily: 'Montserrat'
+	    },
+	    separator: {
+	      borderBottom: '3px solid #00AEFF',
+	      width: 105,
+	      height: 1,
+	      position: 'relative',
+	      top: 5,
+	      zIndex: 1
+	    },
+	    features: {
+	      wrapper1: {
+	        boxSizing: 'border-box',
+	        width: '50%',
+	        height: 80,
+	        display: 'flex',
+	        alignContent: 'center',
+	        flexWrap: 'wrap',
+	        textAlign: 'right',
+	        paddingRight: 60
+	      },
+	      wrapper2: {
+	        boxSizing: 'border-box',
+	        width: '50%',
+	        height: 80,
+	        display: 'flex',
+	        alignContent: 'center',
+	        flexWrap: 'wrap',
+	        textAlign: 'left',
+	        paddingLeft: 60
+	      },
+	      wrapper3: {
+	        boxSizing: 'border-box',
+	        width: '50%',
+	        height: 100,
+	        display: 'flex',
+	        alignContent: 'center',
+	        flexWrap: 'wrap',
+	        textAlign: 'right',
+	        paddingRight: 60
+	      },
+	      wrapper4: {
+	        boxSizing: 'border-box',
+	        width: '50%',
+	        height: 100,
+	        display: 'flex',
+	        alignContent: 'center',
+	        flexWrap: 'wrap',
+	        textAlign: 'left',
+	        paddingLeft: 60
+	      },
+	      title: {
+	        fontSize: 14,
+	        textTransform: 'uppercase',
+	        width: '100%'
+	      },
+	      text: {
+	        marginTop: 3,
+	        color: '#777',
+	        fontSize: 13,
+	        width: '100%'
+	      }
+	    },
+	    url: {
+	      wrapper: {
+	        flexGrow: 1,
+	        color: '#333',
+	        fontSize: 30,
+	        fontFamily: 'Montserrat'
+	      },
+	      protocol: {
+	        fontSize: 24,
+	        color: '#CCC',
+	        marginRight: 2,
+	        fontStyle: 'normal'
+	      },
+	      spinner: {
+	        flexGrow: 1,
+	        backgroundImage: 'url(./img/spinner.gif)',
+	        backgroundRepeat: 'no-repeat',
+	        backgroundSize: 'contain',
+	        backgroundPosition: 'center center',
+	        color: '#FFF'
+	      }
+	    },
+	    input: {
+	      border: 'none',
+	      borderBottom: '1px solid #CCC',
+	      textAlign: 'center',
+	      fontSize: 18,
+	      padding: '2px 0',
+	      width: 150
+	    }
+	  },
+	  ghost: {
+	    position: 'absolute',
+	    zIndex: 1,
+	    bottom: 0,
+	    right: 0,
+	    height: 50,
+	    width: '40%',
+	    background: '#FFF'
+	  }
 	};
 
 	var googleUrl = new _googleUrl2.default({ key: ("AIzaSyAk6LuX2cbKppS93MkVi9aTWVM_WwF1AtM") });
 	var kurtURL =  false ? 'https://kurt.puppets.life/' : ("http://burn-the-witch.local:9000/");
 
 	var QPUrl = function (_Component) {
-		_inherits(QPUrl, _Component);
+	  _inherits(QPUrl, _Component);
 
-		function QPUrl(props) {
-			_classCallCheck(this, QPUrl);
+	  function QPUrl(props) {
+	    _classCallCheck(this, QPUrl);
 
-			var _this = _possibleConstructorReturn(this, (QPUrl.__proto__ || Object.getPrototypeOf(QPUrl)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (QPUrl.__proto__ || Object.getPrototypeOf(QPUrl)).call(this, props));
 
-			_this.state = { shortURL: null, connected: false };
-			_index2.default.on('connect', function () {
-				return _this.setState({ connected: true });
-			});
-			return _this;
-		}
+	    _this.state = { shortURL: null, connected: false };
+	    _index2.default.on('connect', function () {
+	      return _this.setState({ connected: true });
+	    });
+	    return _this;
+	  }
 
-		_createClass(QPUrl, [{
-			key: 'componentWillReceiveProps',
-			value: function componentWillReceiveProps(props) {
-				var _this2 = this;
+	  _createClass(QPUrl, [{
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(props) {
+	      var _this2 = this;
 
-				var signal = props.signal;
+	      var signal = props.signal;
 
-				if (signal) {
-					console.log('kurt url: ', kurtURL);
-					googleUrl.shorten(kurtURL + '?signal=' + btoa(JSON.stringify(signal)), function (err, res) {
-						if (err) {
-							console.log('Error: ', err);
-						}
-						_this2.setState({ shortURL: res });
-					});
-				}
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var _this3 = this;
+	      if (signal) {
+	        console.log('kurt url: ', kurtURL);
+	        googleUrl.shorten(kurtURL + '?signal=' + btoa(JSON.stringify(signal)), function (err, res) {
+	          if (err) {
+	            console.log('Error: ', err);
+	          }
+	          _this2.setState({ shortURL: res });
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
 
-				if (this.state.connected) {
-					return _react2.default.createElement(
-						'div',
-						null,
-						'Connected!'
-					);
-				}
+	      if (this.state.connected) {
+	        return _react2.default.createElement(
+	          'div',
+	          null,
+	          'Connected!'
+	        );
+	      }
 
-				if (!this.props.signal || !this.state.shortURL) {
-					return _react2.default.createElement(
-						'div',
-						{ style: styles.qp.url.spinner },
-						'\xB7'
-					);
-				}
+	      if (!this.props.signal || !this.state.shortURL) {
+	        return _react2.default.createElement(
+	          'div',
+	          { style: styles.qp.url.spinner },
+	          '\xB7'
+	        );
+	      }
 
-				return _react2.default.createElement(
-					'div',
-					{ style: styles.qp.url.wrapper },
-					_react2.default.createElement(
-						'span',
-						{ style: styles.qp.url.protocol },
-						this.state.shortURL
-					),
-					_react2.default.createElement(
-						'div',
-						null,
-						'Enter ID: ',
-						_react2.default.createElement('input', { type: 'text', onChange: function onChange(e) {
-								return _this3.setState({ id: e.currentTarget.value });
-							} }),
-						_react2.default.createElement('input', {
-							type: 'button',
-							value: 'Go',
-							onClick: function onClick() {
-								googleUrl.expand('https://goo.gl/' + _this3.state.id, function (err, longUrl) {
-									//console.log(longUrl)
-									var data = JSON.parse(atob(longUrl.split('?signal=')[1]));
-									_index2.default.connect(data);
-								});
-							} })
-					)
-				);
-			}
-		}]);
+	      return _react2.default.createElement(
+	        'div',
+	        { style: styles.qp.url.wrapper },
+	        _react2.default.createElement(
+	          'span',
+	          { style: styles.qp.url.protocol },
+	          this.state.shortURL
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement('input', {
+	            style: styles.qp.input,
+	            placeholder: 'Enter ID here',
+	            type: 'text',
+	            onChange: function onChange(e) {
+	              return _this3.setState({ id: e.currentTarget.value });
+	            }
+	          }),
+	          _react2.default.createElement('input', {
+	            type: 'button',
+	            value: 'Go',
+	            onClick: function onClick() {
+	              googleUrl.expand('https://goo.gl/' + _this3.state.id, function (err, longUrl) {
+	                //console.log(longUrl)
+	                var data = JSON.parse(atob(longUrl.split('?signal=')[1]));
+	                _index2.default.connect(data);
+	              });
+	            } })
+	        )
+	      );
+	    }
+	  }]);
 
-		return QPUrl;
+	  return QPUrl;
 	}(_react.Component);
 
 	var Theater = function (_Component2) {
-		_inherits(Theater, _Component2);
+	  _inherits(Theater, _Component2);
 
-		function Theater(props) {
-			_classCallCheck(this, Theater);
+	  function Theater(props) {
+	    _classCallCheck(this, Theater);
 
-			var _this4 = _possibleConstructorReturn(this, (Theater.__proto__ || Object.getPrototypeOf(Theater)).call(this, props));
+	    var _this4 = _possibleConstructorReturn(this, (Theater.__proto__ || Object.getPrototypeOf(Theater)).call(this, props));
 
-			_this4.state = { signal: null };
-			return _this4;
-		}
+	    _this4.state = { signal: null };
+	    return _this4;
+	  }
 
-		_createClass(Theater, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var _this5 = this;
+	  _createClass(Theater, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _this5 = this;
 
-				_index2.default.start().then(function (signal) {
-					return _this5.setState({ signal: signal });
-				});
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ style: styles.wrapper },
-					_react2.default.createElement(
-						'div',
-						{ style: styles.canvas.realCanvas },
-						_react2.default.createElement(_stage2.default, null)
-					),
-					_react2.default.createElement('div', { style: styles.canvas.wrapper }),
-					_react2.default.createElement(
-						'div',
-						{ style: styles.qp.wrapper },
-						_react2.default.createElement(
-							'div',
-							{ style: styles.qp.inner },
-							_react2.default.createElement(
-								'div',
-								{ style: styles.qp.title },
-								_react2.default.createElement(
-									'div',
-									null,
-									'Quick Play'
-								),
-								_react2.default.createElement('div', { style: styles.qp.separator })
-							),
-							_react2.default.createElement(
-								'div',
-								{ style: styles.qp.features.wrapper1 },
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.title },
-									'Pure & Simple'
-								),
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.text },
-									'Everyone can come',
-									_react2.default.createElement('br', null),
-									'in and play!'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ style: styles.qp.features.wrapper2 },
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.title },
-									'Wireless'
-								),
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.text },
-									'No cables needed!',
-									_react2.default.createElement('br', null),
-									'nor strings =P'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ style: styles.qp.features.wrapper3 },
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.title },
-									'How to play?'
-								),
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.text },
-									'Visit URL',
-									_react2.default.createElement('br', null),
-									'in your phone!'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ style: styles.qp.features.wrapper4 },
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.title },
-									'Browser'
-								),
-								_react2.default.createElement(
-									'div',
-									{ style: styles.qp.features.text },
-									'Open up in any',
-									_react2.default.createElement('br', null),
-									'browser App!'
-								)
-							),
-							_react2.default.createElement(QPUrl, { signal: this.state.signal })
-						)
-					),
-					_react2.default.createElement('div', { style: styles.ghost })
-				);
-			}
-		}]);
+	      _index2.default.start().then(function (signal) {
+	        return _this5.setState({ signal: signal });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { style: styles.wrapper },
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.canvas.realCanvas },
+	          _react2.default.createElement(_stage2.default, null)
+	        ),
+	        _react2.default.createElement('div', { style: styles.canvas.wrapper }),
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.qp.wrapper },
+	          _react2.default.createElement(
+	            'div',
+	            { style: styles.qp.inner },
+	            _react2.default.createElement(
+	              'div',
+	              { style: styles.qp.title },
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                'Quick Play'
+	              ),
+	              _react2.default.createElement('div', { style: styles.qp.separator })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: styles.qp.features.wrapper1 },
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.title },
+	                'Pure & Simple'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.text },
+	                'Everyone can come',
+	                _react2.default.createElement('br', null),
+	                'in and play!'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: styles.qp.features.wrapper2 },
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.title },
+	                'Wireless'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.text },
+	                'No cables needed!',
+	                _react2.default.createElement('br', null),
+	                'nor strings =P'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: styles.qp.features.wrapper3 },
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.title },
+	                'How to play?'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.text },
+	                'Visit URL',
+	                _react2.default.createElement('br', null),
+	                'in your phone!'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: styles.qp.features.wrapper4 },
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.title },
+	                'Browser'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { style: styles.qp.features.text },
+	                'Open up in any',
+	                _react2.default.createElement('br', null),
+	                'browser App!'
+	              )
+	            ),
+	            _react2.default.createElement(QPUrl, { signal: this.state.signal })
+	          )
+	        ),
+	        _react2.default.createElement('div', { style: styles.ghost })
+	      );
+	    }
+	  }]);
 
-		return Theater;
+	  return Theater;
 	}(_react.Component);
 
 	exports.default = Theater;
