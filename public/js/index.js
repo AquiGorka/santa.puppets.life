@@ -19863,7 +19863,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -19885,235 +19885,240 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var styles = {
-		wrapper: {
-			fontFamily: 'Love Ya Like A Sister',
-			padding: '20px 10px 10px 20px',
-			fontSize: 35,
-			borderBottom: '3px solid orange',
-			background: 'rgba(255,255,255,0.99)',
-			borderTopLeftRadius: 5,
-			borderTopRightRadius: 5,
-			display: 'flex'
-		},
-		social: {
-			flexGrow: 1,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'flex-end'
-		},
-		icon: {
-			fontSize: 16,
-			border: '2px solid #CCC',
-			borderRadius: 30,
-			background: '#FFF',
-			color: '#CCC',
-			width: 30,
-			height: 30,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			cursor: 'pointer'
-		},
-		github: {
-			icon: {
-				fontSize: 22,
-				border: '2px solid #CCC',
-				borderRadius: 30,
-				background: '#FFF',
-				color: '#CCC',
-				width: 30,
-				height: 30,
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				cursor: 'pointer'
-			},
-			hover: {
-				fontSize: 22,
-				borderRadius: 30,
-				background: '#FFF',
-				width: 30,
-				height: 30,
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				cursor: 'pointer',
-				color: '#24292E',
-				border: '2px solid #24292E'
-			}
-		},
-		facebook: {
-			fontSize: 16,
-			borderRadius: 30,
-			background: '#FFF',
-			width: 30,
-			height: 30,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			cursor: 'pointer',
-			color: '#3A5795',
-			border: '2px solid #3A5795'
-		},
-		twitter: {
-			fontSize: 16,
-			borderRadius: 30,
-			background: '#FFF',
-			width: 30,
-			height: 30,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			cursor: 'pointer',
-			border: '2px solid #55ACEE',
-			color: '#55ACEE'
-		},
-		contact: {
-			fontSize: 16,
-			borderRadius: 30,
-			background: '#FFF',
-			width: 30,
-			height: 30,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			cursor: 'pointer',
-			border: '2px solid orange',
-			color: 'orange'
-		},
-		indiegogo: {
-			fontSize: 16,
-			borderRadius: 30,
-			background: '#FFF',
-			width: 30,
-			height: 30,
-			display: 'flex',
-			alignItems: 'center',
-			justifyContent: 'center',
-			cursor: 'pointer',
-			border: '2px solid #EB1478',
-			color: '#EB1478'
-		},
-		link: {
-			textDecoration: 'none',
-			marginRight: 10
-		},
-		by: {
-			span: {
-				color: '#CCC',
-				fontSize: 20,
-				marginLeft: 15
-			},
-			link: {
-				link: {
-					color: '#CCC',
-					textDecoration: 'none'
-				},
-				normal: {
-					display: 'inline-block'
-				},
-				hover: {
-					display: 'inline-block',
-					textDecoration: 'underline'
-				}
-			}
-		}
+	  wrapper: {
+	    fontFamily: 'Love Ya Like A Sister',
+	    padding: '20px 10px 10px 20px',
+	    fontSize: 35,
+	    borderBottom: '3px solid orange',
+	    background: 'rgba(255,255,255,0.99)',
+	    borderTopLeftRadius: 5,
+	    borderTopRightRadius: 5,
+	    display: 'flex'
+	  },
+	  social: {
+	    flexGrow: 1,
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'flex-end'
+	  },
+	  icon: {
+	    fontSize: 16,
+	    border: '2px solid #CCC',
+	    borderRadius: 30,
+	    background: '#FFF',
+	    color: '#CCC',
+	    width: 30,
+	    height: 30,
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+	    cursor: 'pointer'
+	  },
+	  github: {
+	    icon: {
+	      fontSize: 22,
+	      border: '2px solid #CCC',
+	      borderRadius: 30,
+	      background: '#FFF',
+	      color: '#CCC',
+	      width: 30,
+	      height: 30,
+	      display: 'flex',
+	      alignItems: 'center',
+	      justifyContent: 'center',
+	      cursor: 'pointer'
+	    },
+	    hover: {
+	      fontSize: 22,
+	      borderRadius: 30,
+	      background: '#FFF',
+	      width: 30,
+	      height: 30,
+	      display: 'flex',
+	      alignItems: 'center',
+	      justifyContent: 'center',
+	      cursor: 'pointer',
+	      color: '#24292E',
+	      border: '2px solid #24292E'
+	    }
+	  },
+	  facebook: {
+	    fontSize: 16,
+	    borderRadius: 30,
+	    background: '#FFF',
+	    width: 30,
+	    height: 30,
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+	    cursor: 'pointer',
+	    color: '#3A5795',
+	    border: '2px solid #3A5795'
+	  },
+	  twitter: {
+	    fontSize: 16,
+	    borderRadius: 30,
+	    background: '#FFF',
+	    width: 30,
+	    height: 30,
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+	    cursor: 'pointer',
+	    border: '2px solid #55ACEE',
+	    color: '#55ACEE'
+	  },
+	  contact: {
+	    fontSize: 16,
+	    borderRadius: 30,
+	    background: '#FFF',
+	    width: 30,
+	    height: 30,
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+	    cursor: 'pointer',
+	    border: '2px solid orange',
+	    color: 'orange'
+	  },
+	  indiegogo: {
+	    fontSize: 16,
+	    borderRadius: 30,
+	    background: '#FFF',
+	    width: 30,
+	    height: 30,
+	    display: 'flex',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+	    cursor: 'pointer',
+	    border: '2px solid #EB1478',
+	    color: '#EB1478'
+	  },
+	  link: {
+	    textDecoration: 'none',
+	    marginRight: 10
+	  },
+	  by: {
+	    span: {
+	      color: '#CCC',
+	      fontSize: 20,
+	      marginLeft: 15
+	    },
+	    link: {
+	      link: {
+	        color: '#CCC',
+	        textDecoration: 'none'
+	      },
+	      normal: {
+	        display: 'inline-block'
+	      },
+	      hover: {
+	        display: 'inline-block',
+	        textDecoration: 'underline'
+	      }
+	    }
+	  }
 	};
 
 	var Header = function (_Component) {
-		_inherits(Header, _Component);
+	  _inherits(Header, _Component);
 
-		function Header() {
-			_classCallCheck(this, Header);
+	  function Header() {
+	    _classCallCheck(this, Header);
 
-			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
-		}
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	  }
 
-		_createClass(Header, [{
-			key: 'onClickContact',
-			value: function onClickContact(e) {
-				e.preventDefault();
-				this.props.onShowContact();
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					{ style: styles.wrapper },
-					_react2.default.createElement(
-						'div',
-						null,
-						'Puppets.life',
-						_react2.default.createElement(
-							'span',
-							{ style: styles.by.span },
-							'by ',
-							_react2.default.createElement(
-								_hover2.default,
-								{ style: styles.by.link.normal, hover: styles.by.link.hover },
-								_react2.default.createElement(
-									'a',
-									{ style: styles.by.link.link, href: 'https://www.AquiGorka.net', target: '_blank' },
-									'AquiGorka.net'
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						'div',
-						{ style: styles.social },
-						_react2.default.createElement(
-							'a',
-							{ style: styles.link, href: 'http://igg.me/at/puppets-life', target: '_blank', title: 'Puppets @ IndieGoGo' },
-							_react2.default.createElement(
-								_hover2.default,
-								{ style: styles.icon, hover: styles.indiegogo },
-								_react2.default.createElement('i', { className: 'fa fa-thumbs-up' })
-							)
-						),
-						_react2.default.createElement(
-							'a',
-							{ style: styles.link, href: 'https://github.com/AquiGorka/puppets', target: '_blank', title: 'Puppets @ Github' },
-							_react2.default.createElement(
-								_hover2.default,
-								{ style: styles.github.icon, hover: styles.github.hover },
-								_react2.default.createElement('i', { className: 'fa fa-github' })
-							)
-						),
-						_react2.default.createElement(
-							'a',
-							{ style: styles.link, href: 'https://www.facebook.com/puppets.life/', target: '_blank', title: 'Puppets @ Facebook' },
-							_react2.default.createElement(
-								_hover2.default,
-								{ style: styles.icon, hover: styles.facebook },
-								_react2.default.createElement('i', { className: 'fa fa-facebook' })
-							)
-						),
-						_react2.default.createElement(
-							'a',
-							{ style: styles.link, href: 'https://twitter.com/Puppets_Life', target: '_blank', title: 'Puppets @ Twitter' },
-							_react2.default.createElement(
-								_hover2.default,
-								{ style: styles.icon, hover: styles.twitter },
-								_react2.default.createElement('i', { className: 'fa fa-twitter' })
-							)
-						),
-						_react2.default.createElement(
-							'a',
-							{ style: styles.link, href: '#', onClick: this.onClickContact, target: '_blank', title: 'Contact Us @\xA0Puppets' },
-							_react2.default.createElement(
-								_hover2.default,
-								{ style: styles.icon, hover: styles.contact },
-								_react2.default.createElement('i', { className: 'fa fa-envelope' })
-							)
-						)
-					)
-				);
-			}
-		}]);
+	  _createClass(Header, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
 
-		return Header;
+	      return _react2.default.createElement(
+	        'div',
+	        { style: styles.wrapper },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          'Puppets.life',
+	          _react2.default.createElement(
+	            'span',
+	            { style: styles.by.span },
+	            'by ',
+	            _react2.default.createElement(
+	              _hover2.default,
+	              { style: styles.by.link.normal, hover: styles.by.link.hover },
+	              _react2.default.createElement(
+	                'a',
+	                { style: styles.by.link.link, href: 'https://www.AquiGorka.net', target: '_blank' },
+	                'AquiGorka.net'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { style: styles.social },
+	          _react2.default.createElement(
+	            'a',
+	            { style: styles.link, href: 'http://igg.me/at/puppets-life', target: '_blank', title: 'Puppets @ IndieGoGo' },
+	            _react2.default.createElement(
+	              _hover2.default,
+	              { style: styles.icon, hover: styles.indiegogo },
+	              _react2.default.createElement('i', { className: 'fa fa-thumbs-up' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { style: styles.link, href: 'https://github.com/AquiGorka/puppets', target: '_blank', title: 'Puppets @ Github' },
+	            _react2.default.createElement(
+	              _hover2.default,
+	              { style: styles.github.icon, hover: styles.github.hover },
+	              _react2.default.createElement('i', { className: 'fa fa-github' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { style: styles.link, href: 'https://www.facebook.com/puppets.life/', target: '_blank', title: 'Puppets @ Facebook' },
+	            _react2.default.createElement(
+	              _hover2.default,
+	              { style: styles.icon, hover: styles.facebook },
+	              _react2.default.createElement('i', { className: 'fa fa-facebook' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { style: styles.link, href: 'https://twitter.com/Puppets_Life', target: '_blank', title: 'Puppets @ Twitter' },
+	            _react2.default.createElement(
+	              _hover2.default,
+	              { style: styles.icon, hover: styles.twitter },
+	              _react2.default.createElement('i', { className: 'fa fa-twitter' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            {
+	              style: styles.link,
+	              href: '#',
+	              onClick: function onClick(e) {
+	                e.preventDefault();
+	                _this2.props.onShowContact();
+	              },
+	              target: '_blank',
+	              title: 'Contact Us @\xA0Puppets'
+	            },
+	            _react2.default.createElement(
+	              _hover2.default,
+	              { style: styles.icon, hover: styles.contact },
+	              _react2.default.createElement('i', { className: 'fa fa-envelope' })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Header;
 	}(_react.Component);
 
 	exports.default = Header;
@@ -20348,6 +20353,15 @@
 	      fontSize: 18,
 	      padding: '2px 0',
 	      width: 150
+	    },
+	    connected: {
+	      display: 'flex',
+	      alignItems: 'center',
+	      justifyContent: 'center',
+	      width: '100%',
+	      fontSize: 18,
+	      color: '#333',
+	      textShadow: '1px 1px 1px #EEE'
 	    }
 	  },
 	  ghost: {
@@ -20404,7 +20418,7 @@
 	      if (this.state.connected) {
 	        return _react2.default.createElement(
 	          'div',
-	          null,
+	          { style: styles.qp.connected },
 	          'Connected!'
 	        );
 	      }
