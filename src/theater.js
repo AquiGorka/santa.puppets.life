@@ -147,6 +147,15 @@ var styles = {
       fontSize: 18,
       padding: '2px 0',
       width: 150
+    },
+    connected: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%',
+      fontSize: 18,
+      color: '#333',
+      textShadow: '1px 1px 1px #EEE'
     }
   },
   ghost: {
@@ -185,7 +194,7 @@ class QPUrl extends Component {
 
   render() {
     if (this.state.connected) {
-      return <div>Connected!</div>
+      return <div style={styles.qp.connected}>Connected!</div>
     }
 
     if (!this.props.signal || !this.state.shortURL) {
