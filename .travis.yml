@@ -1,5 +1,15 @@
+language: node_js
+node_js:
+  - "node"
+git:
+  depth: 10
+branches:
+  only:
+    - master
+before_script:
+  - npm install
 script:
-  - exit npm run build
+  - npm run build
 deploy:
   provider: gcs
   access_key_id: GOOGOXTPJ2JM4WHPFQXO
