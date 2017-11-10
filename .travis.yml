@@ -1,5 +1,5 @@
 script:
-  - exit 0
+  - exit npm run build
 deploy:
   provider: gcs
   access_key_id: GOOGOXTPJ2JM4WHPFQXO
