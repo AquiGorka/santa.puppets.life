@@ -4,9 +4,15 @@
   "description": "Santa @ Puppets",
   "main": "src/index.js",
   "scripts": {
-    "watch": "BUILD_DEV=1 BUILD_PROD=0 webpack --progress --colors --watch",
-    "build_dev": "BUILD_DEV=1 BUILD_PROD=0 webpack --progress --colors",
-    "build": "BUILD_DEV=0 BUILD_PROD=1 webpack -p --progress --colors",
+		"setup": "rm -rf public && mkdir -p public/js",
+		"img": "cp -r static/img public/img",
+		"libs": "cp -r static/libs public/libs",
+		"models": "cp -r static/models public/models",
+		"html": "cp static/index.html public/index.html",
+		"assets": "npm run setup && npm run img && npm run libs && npm run models && cp static/index.html public/index.html",
+    "watch": "npm run assets && BUILD_DEV=1 BUILD_PROD=0 webpack --progress --colors --watch",
+    "build_dev": "npm run assets && BUILD_DEV=1 BUILD_PROD=0 webpack --progress --colors",
+    "build": "npm run assets && BUILD_DEV=0 BUILD_PROD=1 webpack -p --progress --colors",
     "start": "python -m SimpleHTTPServer 8000"
   },
   "author": "Gorka",
