@@ -9,7 +9,7 @@
     "libs": "cp -r static/libs public/libs",
     "models": "cp -r static/models public/models",
     "html": "cp static/index.html public/index.html",
-    "assets": "npm run setup && npm run img && npm run libs && npm run models && cp static/index.html public/index.html",
+    "assets": "npm run setup && npm run img && npm run libs && npm run models && npm run html",
     "watch": "npm run assets && BUILD_DEV=1 BUILD_PROD=0 webpack --progress --colors --watch",
     "build_dev": "npm run assets && BUILD_DEV=1 BUILD_PROD=0 webpack --progress --colors",
     "build": "npm run assets && BUILD_DEV=0 BUILD_PROD=1 webpack -p --progress --colors",
@@ -31,7 +31,6 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "json-loader": "^0.5.7",
-    "socket.io-client": "^1.3.7",
     "webpack": "^1.12.9"
   }
 }
