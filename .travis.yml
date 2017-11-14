@@ -1,18 +1,18 @@
 language: node_js
 node_js:
-  - "node"
+- node
 git:
   depth: 10
 branches:
   only:
-    - master
+  - master
 script:
-  - npm run build
+- npm run build
 deploy:
   provider: gcs
   access_key_id: GOOGOXTPJ2JM4WHPFQXO
   secret_access_key:
-    secure: SBtL0HUt6815M48cdtZc0/q3oY/O4vNf+OcwCCsXLPR6C8kIPBIDwIWW7e/WeUuL6p0VhRTHko9WpR9VAJryqKVe0W2OlbyToZ21M5CIUvMTQlpvp3aMDShWFFUWgc7zSSxR1mxtp4ZIdEusxm3Y0HLJfFmH4PdZ3YKAiZYr8u2cufqAzyWGop8onL3RfLqvU29Wicqv5GBDcMpc6v6D7moXDoNREGhncJIhQRdCUbZ/g1UeTsmeJGPVR/H0CXiWYWqVjaBT0MHixgBDP2mAyOMxFFS1H/8l0MDUyG1KgAJ4ZjXrnn9T+sMMPoTyEhADBAZ7feFLKKpXJCpRbB6W32uwYtbW2++InYYPLo6EBd3PpYBIfgAXyFLgjNnPzskPBOBjAdWuzZ5sXx0PQx7tQWWzE6WmNCSbwNoc5A6XPuMzrPjivJFnZmdvh7i3JeMxGTdgclcdM3CThhMcrMC9v75Cp3yCKsTxPrHhmHzPIjOsauLLoS9ZbH2OgRn1gUq8nW7JhgPQefq3uwcdow3PLkO26MGltPnXYVvgbvzLLrV4hV3qQgdQh8TxBUttCmQcVTPp05/pHkyYdg9cxCAYM5Xx4XyEzaRaF485cfy4uFI6tnVJbpFGNpCXWKFRR4WyrbaSSnCBJCc4AktDZfQ8nB6WelWn+4i0CSOCQ6deUMI=
+    secure: BjepJ+4fPN+3PiEVZtZ97GHxu65qHAmdm1lQ26p8sOJZzjA6UJs1/M+8CJtj4KdKl/fyBn2aKhSlgJACjGDC/aQfEQiY8ERVwAf+agxkMwn3DRgzfThFT3qIs6OJptCAJBMcY/ntcBFRuXZQUsIPTfZjX9m1Y8uCnOUFMJM4ePjLocm7Y/8fMIJUnc+McQ0JvW8LqsQtUS40X2HsLbpiN3PxgFkrIvHoZLVDcHXxOdW3Vk7+81+K1uACFvM0mk5IlqqzjVqwlLiBAFcLXKGJAoW0uSh72h6N0ab4NsMrGmITVvagW9Rubh4yjabPoGBsRQpLni4jurBem80oaWyW8bdPzLUf8bpRaF1+gMgL+M4zcoO/BubKQvrkeGwNqAc5jbZZDgAfOP7xsmZf03/WiTXMAl2B8sw64kZmQSEHutwWJBxl5JfKB+ya+0Qbgr35RTmRy5iZgVd3SpzAiBb5mSNhMZ7K/Zo7b9XUNfdV6K0QsOOMumW8iipjG8KjT4bLwUfew13wqIC+OzMFWMYmSvLo2YaaRnvmwfV4LSWVTV1oV0cnWakFDtkMCSbuk1V63nORKWhs25cRiNQRSzSpgWVsrPGjFbJTpEo2JMZ4OUww5nCDLe/RhiUL8zzky+08p2R8135K4ZZS2pQXIx9jKCj9SwURKEqa/xT+LlGwd7E=
   bucket: santa.puppets.life
   local-dir: public
   overwrite: true
@@ -22,4 +22,3 @@ deploy:
   on:
     repo: AquiGorka/santa.puppets.life
     branch: master
-
