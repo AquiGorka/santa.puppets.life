@@ -18,6 +18,7 @@ deploy:
   overwrite: true
   acl: public-read
   skip_cleanup: true
+  detect_encoding: true
   on:
     repo: AquiGorka/santa.puppets.life
     branch: master
