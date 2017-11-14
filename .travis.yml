@@ -14,10 +14,11 @@ deploy:
   secret_access_key:
     secure: SBtL0HUt6815M48cdtZc0/q3oY/O4vNf+OcwCCsXLPR6C8kIPBIDwIWW7e/WeUuL6p0VhRTHko9WpR9VAJryqKVe0W2OlbyToZ21M5CIUvMTQlpvp3aMDShWFFUWgc7zSSxR1mxtp4ZIdEusxm3Y0HLJfFmH4PdZ3YKAiZYr8u2cufqAzyWGop8onL3RfLqvU29Wicqv5GBDcMpc6v6D7moXDoNREGhncJIhQRdCUbZ/g1UeTsmeJGPVR/H0CXiWYWqVjaBT0MHixgBDP2mAyOMxFFS1H/8l0MDUyG1KgAJ4ZjXrnn9T+sMMPoTyEhADBAZ7feFLKKpXJCpRbB6W32uwYtbW2++InYYPLo6EBd3PpYBIfgAXyFLgjNnPzskPBOBjAdWuzZ5sXx0PQx7tQWWzE6WmNCSbwNoc5A6XPuMzrPjivJFnZmdvh7i3JeMxGTdgclcdM3CThhMcrMC9v75Cp3yCKsTxPrHhmHzPIjOsauLLoS9ZbH2OgRn1gUq8nW7JhgPQefq3uwcdow3PLkO26MGltPnXYVvgbvzLLrV4hV3qQgdQh8TxBUttCmQcVTPp05/pHkyYdg9cxCAYM5Xx4XyEzaRaF485cfy4uFI6tnVJbpFGNpCXWKFRR4WyrbaSSnCBJCc4AktDZfQ8nB6WelWn+4i0CSOCQ6deUMI=
   bucket: santa.puppets.life
-  local_dir: public
+  local-dir: public
   overwrite: true
   acl: public-read
   skip_cleanup: true
   on:
     repo: AquiGorka/santa.puppets.life
     branch: master
+
