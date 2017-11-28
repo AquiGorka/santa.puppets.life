@@ -188,7 +188,7 @@ class QPUrl extends Component {
           console.log('Error: ', err)
         }
         this.setState({ shortURL: res })
-      })  
+      })
     }
   }
 
@@ -197,29 +197,28 @@ class QPUrl extends Component {
       return <div style={styles.qp.connected}>Connected!</div>
     }
 
-    if (!this.props.signal || !this.state.shortURL) {
+    if (!this.props.signal || !this.state.shortURL) {
       return <div style={styles.qp.url.spinner}>·</div>
     }
 
     return <div style={styles.qp.url.wrapper}>
       <span style={styles.qp.url.protocol}>{this.state.shortURL}</span>
       <div>
-        <input
-          style={styles.qp.input}
-          placeholder="Enter ID here"
-          type="text"
-          onChange={e => this.setState({ id: e.currentTarget.value })}
-          />
-        <input
-          type="button"
-          value="Go"
-          onClick={() => {
-            googleUrl.expand(`https://goo.gl/${this.state.id}`, (err, longUrl) => {
-              //console.log(longUrl)
-              const data = JSON.parse(atob(longUrl.split('?signal=')[1]))
-              nsa.connect(data)
-            })
-          }} />
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          const id = this.form.elements[0].value
+          googleUrl.expand(`https://goo.gl/${id}`, (err, longUrl) => {
+            //console.log(longUrl)
+            const data = JSON.parse(atob(longUrl.split('?signal=')[1]))
+            nsa.connect(data)
+          })
+        }}
+        ref={f => this.form = f}
+      >
+        <input style={styles.qp.input} placeholder="Enter ID here" type="text" />
+        <input type="submit" value="Go" />
+      </form>
       </div>
     </div>
   }
