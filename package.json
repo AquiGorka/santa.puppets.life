@@ -20,7 +20,7 @@
   "browserify": {},
   "dependencies": {
     "google-url": "0.0.4",
-    "jquery": "^2.1.4",
+    "jquery": "^3.3.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "simple-peer": "^8.1.1"
